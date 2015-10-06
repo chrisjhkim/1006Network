@@ -9,7 +9,7 @@ import java.net.SocketException;
 public class UDPEchoClient {
 	private static final String SERVER_IP = "192.168.1.106";
 	private static final int SERVER_PORT = 60000;
-	private static final int BUFFER_SIZE = 1024;
+	private static final int BUFFER_SSIZE = 1024;
 
 	public static void main(String[] args) {
 		
@@ -28,7 +28,7 @@ public class UDPEchoClient {
 			datagramSocket.send( sendPacket);
 			
 			//3. Data 받기
-			DatagramPacket receivePacket = new DatagramPacket(new byte[BUFFER_SIZE], BUFFER_SIZE);
+			DatagramPacket receivePacket = new DatagramPacket(new byte[BUFFER_SSIZE], BUFFER_SSIZE);
 			datagramSocket.receive( receivePacket);
 			
 			//4. Data 출력
