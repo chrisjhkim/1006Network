@@ -8,14 +8,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TimeServer {
-	private static final int PORT = 24240;
+	private static final int PORTA = 24240;
 	
 	
 	public static void main(String[] args) {
 		DatagramSocket datagramSocket = null;
 		
 		try {
-			datagramSocket = new DatagramSocket(PORT);
+			datagramSocket = new DatagramSocket(PORTA);
 			//수신대기
 			DatagramPacket receivePacket = new DatagramPacket(new byte[50], 50);
 			
